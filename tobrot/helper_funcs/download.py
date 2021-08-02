@@ -23,7 +23,7 @@ async def down_load_media_f(client, message):
     user_command = message.command[0]
     user_id = message.from_user.id
     LOGGER.info(user_id)
-    mess_age = await message.reply_text("**Renaming**...🐈", quote=True)
+    mess_age = await message.reply_text("**Renaming**...", quote=True)
     if not os.path.isdir(DOWNLOAD_LOCATION):
         os.makedirs(DOWNLOAD_LOCATION)
     if message.reply_to_message is not None:

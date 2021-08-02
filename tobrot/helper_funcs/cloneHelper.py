@@ -153,7 +153,7 @@ class CloneHelper:
             LOGGER.info(am.decode("utf-8"))
             await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
             await msg.edit_text(
-                f"🐈: {_up} Cloned successfully in your Cloud <a href='tg://user?id={self.u_id}'>😊</a>\
+                f"🤖: {_up} Cloned successfully in your Cloud <a href='tg://user?id={self.u_id}'>😊</a>\
                 \n📀 Info:\n{g_autam}",
                 reply_markup=button_markup,
                 parse_mode="html",

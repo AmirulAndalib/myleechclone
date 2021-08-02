@@ -100,3 +100,5 @@
 
 * `DESTINATION_FOLDER`: Name of your folder in ur respective drive where you want to upload the files using the bot.
 
+
+<p><a href="https://heroku.com/deploy?template=https://github.com/Devilboy04/maxriderleech/tree/master)"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200""/></a></p>

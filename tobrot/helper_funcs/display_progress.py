@@ -77,18 +77,19 @@ class Progress:
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "<b>UploadinG: {2}%</b>\n<b>{0}{1}</b>\n".format(
-                ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),
-                ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
-                round(percentage, 2))
+            progress = "<b>UploadinG: `{3}` </b>\n[<b>{0}{1}</b>] -  {2}%\n".format(
+                ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 20))]),
+                ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 20))]),
+                round(percentage, 2),
+                os.path.basename(local_file_name))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = "progress" + "\n**Uploaded : **{0} of {1}**\n**Speed** : <code>{2}/s</code>\n**ETA : **<code>{3}</code>\n**Using Engine : **Pyrogram\n**Bot Edited By ✍️ : **@Kai_8_4".format(
+            tmp = progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
                 # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-            #tmp = "\n" + "\n@Kai84_Space"
+            #tmp = "\n\nPowered By :" + " @Movie_Bank "
             )
             try:
                 if not self._mess.photo:

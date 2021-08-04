@@ -68,7 +68,7 @@ async def down_load_media_f(client, message):
         await upload_to_gdrive(the_real_download_location_g, mess_age, message, user_id)
     else:
         await mess_age.edit_text(
-            "Reply to a Telegram Media, to upload to the Cloud Drive."
+            "<b>FCUK!</b> what have you entered.\nPlease read /help\nAPI Error : None"
         )
  
  

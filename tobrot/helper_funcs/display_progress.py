@@ -77,18 +77,18 @@ class Progress:
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "<b>╭────── ⌊__UploadinG: 〘{2}%〙 📤__⌉</b>\n│ \n<b>├〖{0}{1}〗</b>\n".format(
+            progress = "<b>UploadinG: {2}%</b>\n<b>{0}{1}</b>\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = progress +"│" + "\n**├Total 📀:**   〘<code>{1}</code>〙\n**├Done ✓ :** 〘<code>{0}</code>〙\n**├Speed** 🚀 :  〘<code>{2}/s</code>〙\n**├ETA** ⏳ :  〘<code>{3}</code>〙\n**│**\n**╰── ⌊ <b>⚡️Made By - @IamWarisAliOFFICIAL ❤️</b> ⌉**".format(
+            tmp = progress +"│" + "\n**Total : **<code>{1}</code>\n**Done : **<code>{0}</code>\n**Speed** : <code>{2}/s</code>\n**ETA** ⏳ : <code>{3}</code>\n**<b>⚡️Made By - @IamWarisAliOFFICIAL ❤️</b>**".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
                 # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-            #tmp += "\n│"+"\n╰── ⌊ @TGFilmZone ⌉"
+            tmp += "\n│"+"\n@Kai84_Space"
             )
             try:
                 if not self._mess.photo:

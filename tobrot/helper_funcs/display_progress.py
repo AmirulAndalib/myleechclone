@@ -82,13 +82,13 @@ class Progress:
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = progress +" │ " + "\n**Total : **<code>{1}</code>\n**Done : **<code>{0}</code>\n**Speed** : <code>{2}/s</code>\n**ETA** ⏳ : <code>{3}</code>\n**<b>⚡️Made By - @IamWarisAliOFFICIAL ❤️</b>**".format(
+            tmp = "progress + " + "\n**Total : **<code>{1}</code>\n**Done : **<code>{0}</code>\n**Speed** : <code>{2}/s</code>\n**ETA** ⏳ : <code>{3}</code>".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
                 # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-            tmp += "\n│" + "\n@Kai84_Space"
+            tmp = "\n" + "\n@Kai84_Space"
             )
             try:
                 if not self._mess.photo:

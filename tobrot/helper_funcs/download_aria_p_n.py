@@ -285,7 +285,7 @@ async def call_apropriate_function(
                     message_to_send += "\n"
                 if message_to_send != "":
                     mention_req_user = (
-                        f"<b><a href='tg://user?id={user_id}'>📁 Your Requested Files</a></b>\n\n"
+                        f"<b><a href='tg://user?id={user_id}'>Done</a></b>\nUploaded Size : {file.total_length_string()\n\n"
                     )
                     message_to_send = mention_req_user + message_to_send
                     message_to_send = message_to_send + "\n\n" + "#uploads #Done"
@@ -324,13 +324,13 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     pass
                 #
                 if is_file is None:
-                    msgg = f"<b>➩ Connections : {file.connections} </b>"
+                    msgg = f"<b>Connections : {file.connections} </b>"
                 else:
-                    msgg = f"<b>➩ Info :- P: {file.connections} || S: {file.num_seeders} </b>\n\n<b>🗑️ GID :</b> <code>{gid}</code>"
-                msg = f"\n<b>Downloading :</b> {downloading_dir_name}\n<b>➩ Speed :</b> {file.download_speed_string()} 🔻"
-                msg += f"\n<b>➩ Size :</b> {file.total_length_string()}"
-                msg += f"\n<b>➩ Downloaded</b> : {file.progress_string()} \n<b>➩ ETA :</b> {file.eta_string()} \n {msgg}"
-                msg += f"\nUsing Engine : Aria2\n"
+                    msgg = f"<b>S: {file.num_seeders} 🔸 P: {file.connections}</b>\n\n"
+                msg = f"\n<b>Downloading :</b> <code>{downloading_dir_name}</code>\n<b>Speed :</b> {file.download_speed_string()} 🔻"
+                msg += f"\n<b>Size :</b> {file.total_length_string()}"
+                msg += f"\n<b>Downloaded</b> : {file.progress_string()} \n<b>ETA :</b> {file.eta_string()} \n {msgg}"
+                msg += f"\n<b>Using Engine : </b>Aria2\n"
                 inline_keyboard = []
                 ikeyboard = []
                 ikeyboard.append(

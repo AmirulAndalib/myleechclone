@@ -73,7 +73,7 @@ class Progress:
             elapsed_time = round(diff) * 1000
             time_to_completion = round((total - current) / speed) * 1000
             estimated_total_time = time_to_completion
-            ba_se_file_name = os.path.basename(local_file_name)
+            
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
@@ -82,7 +82,7 @@ class Progress:
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 20))]),
                 round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = "Uploading : " + ba_se_file_name + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
+            tmp = "Uploading :- " + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),

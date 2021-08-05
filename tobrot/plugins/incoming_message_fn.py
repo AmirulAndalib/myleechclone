@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider
+# (c) Shrimadhav U K | gautamajay52 | MaxxRider | Dragonpower84
 
 import asyncio
 import logging
@@ -52,7 +52,7 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command or /gleech command"""
     user_command = message.command[0]
-    #g_id = message.from_user.id
+    g_id = message.from_user.id
    # u_men = message.from_user.mention
     credit = await message.reply_text(f"<a href='tg://user?id={g_id}'>🧲</a> <i>Leeching For You :</i> <b>{username}</b>", parse_mode="html")
     i_m_sefg = await credit.reply_text("processing", quote=True)

@@ -77,7 +77,7 @@ class Progress:
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "<b>UploadinG: `{os.path.basename(local_file_name)}` </b>\n[<b>{0}{1}</b>] -  {2}%\n".format(
+            progress = "<b>UploadinG: `{local_file_name}` </b>\n[<b>{0}{1}</b>] -  {2}%\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 20))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 20))]),
                 round(percentage, 2))

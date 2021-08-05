@@ -283,7 +283,7 @@ async def call_apropriate_function(
                     message_to_send += local_file_name
                     message_to_send += "</a>"
                     message_to_send += "\n"
-                    message_size = "file.total_length_string()"
+                    message_size = f"{file.total_length_string()}"
                 if message_to_send != "":
                     mention_req_user = (
                         f"<b><a href='tg://user?id={user_id}'>Done</a></b>"

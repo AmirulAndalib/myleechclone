@@ -108,3 +108,5 @@
 ## Join Us At
 
 - <img alt="GitHub followers" src="https://img.shields.io/github/followers/Dragonpower84?color=red&logo=Kai84&style=social">
+
+- <img alt="GitHub forks" src="https://img.shields.io/github/forks/Dragonpower84/myleechclone?color=9cf&label=No.%20Of%20Forks&logo=Kai84&logoColor=blue&style=social">

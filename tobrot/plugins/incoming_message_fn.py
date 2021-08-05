@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     u_men = message.from_user.full_name
-    credit = await message.reply_text(f"<a href='tg://user?id={g_id}'>🧲</a> <i>Leeching For You :</i> {u_man}<b></b>", parse_mode="html")
+    credit = await message.reply_text(f"<a href='tg://user?id={g_id}'>🧲</a> <i>Leeching For You :</i> {u_men}<b></b>", parse_mode="html")
     i_m_sefg = await credit.reply_text("processing", quote=True)
     # get link from the incoming message
     if message.reply_to_message:

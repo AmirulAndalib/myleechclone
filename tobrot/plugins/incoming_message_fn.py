@@ -54,10 +54,8 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     #g_id = message.from_user.id
    # u_men = message.from_user.mention
-    #credit = await message.reply_text(
-        #f"<b>⚙ Leeching For :</b> {u_men}", parse_mode="html"
-    #)
-    i_m_sefg = await message.reply_text("`Processing...`", quote=True)
+    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>{username}</a>", parse_mode="html")
+    i_m_sefg = await credit.reply_text("processing", quote=True)
     # get link from the incoming message
     if message.reply_to_message:
         dl_url, cf_name, _, _ = await extract_link(message.reply_to_message, "LEECH")
@@ -68,7 +66,7 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
         cf_name = None
     else:
-        await i_m_sefg.edit("<b>Please Reply to Any Magnet/Direct Link</b>")
+        await i_m_sefg.edit("<b>Please Reply to Any 🧲Magnet / 🔗Direct Link</b>")
         return
     if dl_url is not None:
         await i_m_sefg.edit_text("<b>Extracting Link..🤐</b>")

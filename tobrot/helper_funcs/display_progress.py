@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider
+# (c) Shrimadhav U K | gautamajay52 | MaxxRider | DragonPower84
 
 import logging
 import math
@@ -88,7 +88,7 @@ class Progress:
                 humanbytes(speed),
                 # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-            #tmp = "\n\nPowered By :" + " @Movie_Bank "
+            tmp = "\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n" + "<b>⚡️Edited By - Kai84 ❤️</b> \n"
             )
             try:
                 if not self._mess.photo:

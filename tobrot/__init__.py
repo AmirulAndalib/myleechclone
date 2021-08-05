@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider
+# (c) Shrimadhav U K | gautamajay52 | MaxxRider | Dragonpower84
 
 import logging
 import os
@@ -22,7 +22,7 @@ logging.basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         RotatingFileHandler(
-            "Torrentleech-Gdrive.txt", maxBytes=50000000, backupCount=10
+            "Torrentleech-Gdrive By Kai84.txt", maxBytes=50000000, backupCount=10
         ),
         logging.StreamHandler(),
     ],
@@ -60,16 +60,16 @@ AUTH_CHANNEL = [int(x) for x in os.environ.get("AUTH_CHANNEL", "539295917").spli
 # the download location, where the HTTP Server runs
 DOWNLOAD_LOCATION = "./DOWNLOADS"
 # Telegram maximum file upload size
-MAX_FILE_SIZE = 50000000
-TG_MAX_FILE_SIZE = 2097152000
-FREE_USER_MAX_FILE_SIZE = 50000000
-AUTH_CHANNEL.append(539295917)
+MAX_FILE_SIZE = 10737418240
+TG_MAX_FILE_SIZE = 2136746229
+FREE_USER_MAX_FILE_SIZE = 2147483648
+AUTH_CHANNEL.append(539295917)    
 AUTH_CHANNEL.append(OWNER_ID)
 # chunk size that should be used with requests
 CHUNK_SIZE = int(os.environ.get("CHUNK_SIZE", "128"))
 # default thumbnail to be used in the videos
 DEF_THUMB_NAIL_VID_S = os.environ.get(
-    "DEF_THUMB_NAIL_VID_S", "https://telegra.ph/file/3a7f09b89943b51cdba38.jpg"
+    "DEF_THUMB_NAIL_VID_S", "https://telegra.ph/file/4b029b680e727b2d9974a.jpg"
 )
 # maximum message length in Telegram
 MAX_MESSAGE_LENGTH = 4096
@@ -78,9 +78,9 @@ PROCESS_MAX_TIMEOUT = 3600
 #
 SP_LIT_ALGO_RITH_M = os.environ.get("SP_LIT_ALGO_RITH_M", "hjs")
 ARIA_TWO_STARTED_PORT = int(os.environ.get("ARIA_TWO_STARTED_PORT", "6800"))
-EDIT_SLEEP_TIME_OUT = int(os.environ.get("EDIT_SLEEP_TIME_OUT", "15"))
+EDIT_SLEEP_TIME_OUT = int(os.environ.get("EDIT_SLEEP_TIME_OUT", "7"))
 MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START = int(
-    os.environ.get("MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START", 300)
+    os.environ.get("MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START", 180)
 )
 MAX_TG_SPLIT_FILE_SIZE = int(os.environ.get("MAX_TG_SPLIT_FILE_SIZE", "2097152000"))
 # add config vars for the display progress
@@ -88,28 +88,28 @@ FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "█")
 UN_FINISHED_PROGRESS_STR = os.environ.get("UN_FINISHED_PROGRESS_STR", "░")
 # add offensive API
 TG_OFFENSIVE_API = os.environ.get("TG_OFFENSIVE_API", None)
-CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
+CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "@Movie_Bank ")
 LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech")
 LEECH_UNZIP_COMMAND = os.environ.get("LEECH_UNZIP_COMMAND", "extract")
 LEECH_ZIP_COMMAND = os.environ.get("LEECH_ZIP_COMMAND", "archive")
 GLEECH_COMMAND = os.environ.get("GLEECH_COMMAND", "gleech")
-GLEECH_UNZIP_COMMAND = os.environ.get("GLEECH_UNZIP_COMMAND", "gleechunzip")
-GLEECH_ZIP_COMMAND = os.environ.get("GLEECH_ZIP_COMMAND", "gleechzip")
+GLEECH_UNZIP_COMMAND = os.environ.get("GLEECH_UNZIP_COMMAND", "gunzip")
+GLEECH_ZIP_COMMAND = os.environ.get("GLEECH_ZIP_COMMAND", "gzip")
 YTDL_COMMAND = os.environ.get("YTDL_COMMAND", "ytdl")
-GYTDL_COMMAND = os.environ.get("GYTDL_COMMAND", "gytdl")
+GYTDL_COMMAND = os.environ.get("GYTDL_COMMAND", "pytdl")
 RCLONE_CONFIG = os.environ.get("RCLONE_CONFIG", "")
-DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "Maxx TD")
+DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "Root")
 INDEX_LINK = os.environ.get("INDEX_LINK", "")
-TELEGRAM_LEECH_COMMAND = os.environ.get("TELEGRAM_LEECH_COMMAND", "tgfile_leech")
+TELEGRAM_LEECH_COMMAND = os.environ.get("TELEGRAM_LEECH_COMMAND", "tleech")
 TELEGRAM_LEECH_UNZIP_COMMAND = os.environ.get(
-    "TELEGRAM_LEECH_UNZIP_COMMAND", "tgfile_extract"
+    "TELEGRAM_LEECH_UNZIP_COMMAND", "tunzip"
 )
 CANCEL_COMMAND_G = os.environ.get("CANCEL_COMMAND_G", "cancel")
 GET_SIZE_G = os.environ.get("GET_SIZE_G", "getsize")
 STATUS_COMMAND = os.environ.get("STATUS_COMMAND", "status")
-SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumbnail")
-CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumbnail")
-UPLOAD_AS_DOC = os.environ.get("UPLOAD_AS_DOC", "False")
+SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumb")
+CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumb")
+UPLOAD_AS_DOC = os.environ.get("UPLOAD_AS_DOC")
 PYTDL_COMMAND = os.environ.get("PYTDL_COMMAND", "pytdl")
 GPYTDL_COMMAND = os.environ.get("GPYTDL_COMMAND", "gpytdl")
 LOG_COMMAND = os.environ.get("LOG_COMMAND", "log")
@@ -117,8 +117,8 @@ CLONE_COMMAND_G = os.environ.get("CLONE_COMMAND_G", "gclone")
 UPLOAD_COMMAND = os.environ.get("UPLOAD_COMMAND", "upload")
 RENEWME_COMMAND = os.environ.get("RENEWME_COMMAND", "renewme")
 RENAME_COMMAND = os.environ.get("RENAME_COMMAND", "rename")
-TOGGLE_VID = os.environ.get("TOGGLE_VID", "upload_vid")
-TOGGLE_DOC = os.environ.get("TOGGLE_DOC", "upload_doc")
+TOGGLE_VID = os.environ.get("TOGGLE_VID", "togglevid")
+TOGGLE_DOC = os.environ.get("TOGGLE_DOC", "toggledoc")
 BOT_START_TIME = time.time()
 # dict to control uploading and downloading
 gDict = defaultdict(lambda: [])

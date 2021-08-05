@@ -88,7 +88,8 @@ async def status_message_f(client, message):
         f"<b>Total Disk Space</b>: <code>{total}</code>\n"
         f"<b>Used</b>: <code>{used}</code>\n"
         f"<b>Free</b>: <code>{free}</code>\n"
-        f"<b>⚡️Made By - @Kai_8_4 ❤️</b>\n"
+        f"<b>⚡️Made By - Waris Ali ❤️</b>\n"
+        f"<b>⚡️Edited By - Kai84 ❤️</b>"
     )
     # LOGGER.info(ms_g)
 

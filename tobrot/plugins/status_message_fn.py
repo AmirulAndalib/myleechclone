@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | DragonPower84
 
 import asyncio
 import io
@@ -84,11 +84,11 @@ async def status_message_f(client, message):
     free = humanbytes(free)
 
     ms_g = (
-        f"<b>Bot Uptime</b>: <code>{hr} : {mi} : {se}</code>\n"
-        f"<b>Total disk space</b>: <code>{total}</code>\n"
+        f"<b>Bot Uptime</b>: <code>{hr}h, {mi}m, {se}s</code>\n"
+        f"<b>Total Disk Space</b>: <code>{total}</code>\n"
         f"<b>Used</b>: <code>{used}</code>\n"
         f"<b>Free</b>: <code>{free}</code>\n"
-        f"<b>⚡️Made By - @IamWarisAliOFFICIAL ❤️</b>\n"
+        f"<b>⚡️Made By - @Kai_8_4 ❤️</b>\n"
     )
     # LOGGER.info(ms_g)
 
@@ -249,4 +249,4 @@ def up_time(time_taken):
 async def upload_log_file(client, message):
     g = await AdminCheck(client, message.chat.id, message.from_user.id)
     if g:
-        await message.reply_document("Torrentleech-Gdrive.txt")
+        await message.reply_document("Torrentleech-Gdrive By Kai84.txt")

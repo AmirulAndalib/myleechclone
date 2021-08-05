@@ -5,9 +5,9 @@
   "keywords": [
     "telegram"
   ],
-  "repository": "https://github.com/Devilboy04/maxriderleech",
+  "repository": "https://github.com/Dragonpower84/myleechclone",
   "success_url": "",
-  "website": "https://github.com/Devilboy04/maxriderleech",
+  "website": "https://github.com/Dragonpower84/myleechclone",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -58,10 +58,12 @@
     },
     "FINISHED_PROGRESS_STR": {
       "description": "should be a single character.",
+      "value": "▣",
       "required": false
     },
     "UN_FINISHED_PROGRESS_STR": {
       "description": "should be a single character.",
+      "value": "▢",
       "required": false
     },
     "TG_OFFENSIVE_API": {

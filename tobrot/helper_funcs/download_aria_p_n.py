@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider
+# (c) Shrimadhav U K | gautamajay52 | MaxxRider | Dragonpower84
 
 import asyncio
 import logging
@@ -287,7 +287,7 @@ async def call_apropriate_function(
                     mention_req_user = (
                         f"<b><a href='tg://user?id={user_id}'>Done</a></b>"
                     )
-                    message_to_send = mention_req_user + "\nUploaded Size : {file.total_length_string()\n\n" + message_to_send
+                    message_to_send = mention_req_user + "\nUploaded Size : {file.total_length_string()}\n\n" + message_to_send
                     message_to_send = message_to_send + "\n\n" + "<b>⚡️Made By - Waris Ali ❤️</b>\n<b>⚡️Edited By - Kai84 ❤️</b>"" + "#uploads #Done"
                 else:
                     message_to_send = "<i>FAILED</i> to upload files. 😞😞"

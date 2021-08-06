@@ -289,7 +289,7 @@ async def call_apropriate_function(
                         f"<b><a href='tg://user?id={user_id}'>Done</a></b>"
                     )
                     message_to_send = mention_req_user + "\n" + message_size + "\n\n" + message_to_send
-                    message_to_send = message_to_send + "\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n<b>⚡️Edited By - Kai84 ❤️</b>" + "#uploads #Done"
+                    message_to_send = message_to_send + "\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n<b>⚡️Edited By - Kai84 ❤️</b>" + "\n#uploads #done"
                 else:
                     message_to_send = "<i>FAILED</i> to upload files. 😞😞"
                 await user_message.reply_text(

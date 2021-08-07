@@ -88,7 +88,7 @@ FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "█")
 UN_FINISHED_PROGRESS_STR = os.environ.get("UN_FINISHED_PROGRESS_STR", "░")
 # add offensive API
 TG_OFFENSIVE_API = os.environ.get("TG_OFFENSIVE_API", None)
-CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "@Movie_Bank ")
+CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
 LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech")
 LEECH_UNZIP_COMMAND = os.environ.get("LEECH_UNZIP_COMMAND", "extract")
 LEECH_ZIP_COMMAND = os.environ.get("LEECH_ZIP_COMMAND", "archive")

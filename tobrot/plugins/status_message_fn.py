@@ -55,22 +55,22 @@ async def status_message_f(client, message):
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
             #
-            msg += f"<u>{downloading_dir_name}</u>"
-            msg += " | "
-            msg += f"{total_length_size}"
-            msg += " | "
-            msg += f"{progress_percent_string}"
-            msg += " | "
-            msg += f"{DOWNLOAD_ICON} {down_speed_string}"
-            msg += " | "
-            msg += f"{UPLOAD_ICON} {up_speed_string}"
-            msg += " | "
-            msg += f"{e_t_a}"
-            msg += " | "
-            msg += f"{download_current_status}"
-            msg += " | "
-            msg += f"<code>/cancel {current_gid}</code>"
-            msg += " | "
+            msg += f"\n\n<b>File Name :</b> <u>{downloading_dir_name}</u>\n"
+            
+            msg += f"<b>Size :</b> {total_length_size}\n"
+            
+            msg += f"<b>Downloaded :</b> {progress_percent_string}\n"
+            
+            msg += f"<b> Speed :</b> {DOWNLOAD_ICON} {down_speed_string}"
+            msg += f" 🔸 "
+            msg += f"{UPLOAD_ICON} {up_speed_string}\n"
+            
+            msg += f"<b>ETA :</b> {e_t_a}\n"
+            
+            msg += f"<b>Status :</b> {download_current_status}\n"
+            
+            msg += f"<b>Cancel :</b> <code>/cancel {current_gid}</code>\n"
+            
             msg += "\n\n"
         # LOGGER.info(msg)
 
@@ -84,12 +84,12 @@ async def status_message_f(client, message):
     free = humanbytes(free)
 
     ms_g = (
-        f"<b>Bot Uptime</b>: <code>{hr}h, {mi}m, {se}s</code>\n"
+        f"<b>Bot Uptime</b>: <code>{hr}h,{mi}m,{se}s</code>\n"
         f"<b>Total Disk Space</b>: <code>{total}</code>\n"
         f"<b>Used</b>: <code>{used}</code>\n"
         f"<b>Free</b>: <code>{free}</code>\n"
-        f"<b>⚡️Made By - Waris Ali ❤️</b>\n"
-        f"<b>⚡️Edited By - Kai84 ❤️</b>"
+        f"<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>\n"
+        
     )
     # LOGGER.info(ms_g)
 
@@ -250,4 +250,4 @@ def up_time(time_taken):
 async def upload_log_file(client, message):
     g = await AdminCheck(client, message.chat.id, message.from_user.id)
     if g:
-        await message.reply_document("Torrentleech-Gdrive By Kai84.txt")
+        await message.reply_document("Leech Kai84.txt")

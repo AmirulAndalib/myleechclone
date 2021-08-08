@@ -289,7 +289,7 @@ async def call_apropriate_function(
                         f"<b><a href='tg://user?id={user_id}'>Done</a></b>"
                     )
                     message_to_send = mention_req_user + "\n" + message_size + "\n\n" + message_to_send
-                    message_to_send = message_to_send + "\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n<b>⚡️Edited By - Kai84 ❤️</b>" + "\n#uploads #done"
+                    message_to_send = message_to_send + "\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>" + "\n#uploads #done"
                 else:
                     message_to_send = "<i>FAILED</i> to upload files. 😞😞"
                 await user_message.reply_text(
@@ -331,7 +331,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 msg = f"\n<b>Downloading :</b> <code>{downloading_dir_name}</code>\n<b>Speed :</b> {file.download_speed_string()} 🔻"
                 msg += f"\n<b>Size :</b> {file.total_length_string()}"
                 msg += f"\n<b>Downloaded</b> : {file.progress_string()} \n<b>ETA :</b> {file.eta_string()} \n {msgg}"
-                msg += f"\n<b>Using Engine : </b>Aria2\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n<b>⚡️Edited By - Kai84 ❤️</b>"
+                msg += f"\n<b>Using Engine : </b>Aria2\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>"
                 inline_keyboard = []
                 ikeyboard = []
                 ikeyboard.append(
@@ -393,7 +393,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
         file.remove(force=True, files=True)
         await event.edit(
             "*Download Auto Canceled :**\n\n"
-            "`Your Torrent/Link is Dead.`👺".format(file.name)
+            "`Your Torrent/Link is Dead.`👻👻👻".format(file.name)
         )
         return False
     except Exception as e:

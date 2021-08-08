@@ -80,15 +80,15 @@ class Progress:
             progress = "\n[<b>{0}{1}</b>] -  {2}%\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 20))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 20))]),
-                round(percentage, 2))
+                round(percentage, 4))
             #cpu = "{psutil.cpu_percent()}%"
-            tmp = "Uploading :- " + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
+            tmp = "Uploading :- {4}" + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
-                # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-            tmp = "\n\n<b>⚡️Made By - Waris Ali ❤️</b>\n" + "<b>⚡️Edited By - Kai84 ❤️</b> \n"
+                os.path.basename(local_file_name),
+            tmp = "\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>\n"
             )
             try:
                 if not self._mess.photo:

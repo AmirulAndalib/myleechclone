@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider | Dragonpower84
+# (c) Shrimadhav U K | gautamajay52 | MaxxRider | DragonPower84
 
 import asyncio
 import logging
@@ -125,8 +125,8 @@ async def incoming_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     current_user_id = message.from_user.id
-    #u_men = message.from_user.mention
-    #credit = await message.reply_text(
+    u_men = message.from_user.mention
+    credit = await message.reply_text(
         #f"<b>⚙ Leeching For :</b> {u_men}",
         #parse_mode="html",
     #)
@@ -203,7 +203,7 @@ async def g_yt_playlist(client, message):
     if "youtube.com/playlist" in url:
         u_men = message.from_user.mention
         i_m_sefg = await message.reply_text(
-            f"<b>Ok Fine 🐈 {u_men} Bro!!:\n Your Request has been ADDED</b>\n\n <code> Please wait until Upload</code>",
+            f"<b>Ok Fine 🐈 {u_men} Bro!!:\n Your Request has been ADDED</b>\n\n <code> Please wait until Upload</code> \n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>",
             parse_mode="html",
         )
         await yt_playlist_downg(message, i_m_sefg, client, is_cloud)
@@ -261,7 +261,7 @@ async def rename_tg_file(client, message):
                 message_id = final_response[key_f_res_se]
                 channel_id = str(message.chat.id)[4:]
                 private_link = f"https://t.me/c/{channel_id}/{message_id}"
-                message_to_send += "➪ <a href='"
+                message_to_send += "🔸 <a href='"
                 message_to_send += private_link
                 message_to_send += "'>"
                 message_to_send += local_file_name
@@ -272,7 +272,7 @@ async def rename_tg_file(client, message):
                     f"<a href='tg://user?id={usr_id}'>🐈 Hey Bru!! Your Requested Files 👇</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
-                message_to_send = message_to_send + "\n\n" + "<b> #UPLOADS\n\n💫 ⚡️Made By - @IamWarisAliOFFICIAL ❤️</b>"
+                message_to_send = message_to_send + "\n\n" + "#Uploads #Done\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>"
             else:
                 message_to_send = "<i>FAILED</i> to upload files. 😞😞"
             await message.reply_text(

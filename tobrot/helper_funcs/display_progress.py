@@ -80,7 +80,7 @@ class Progress:
             progress = "\n[<b>{0}{1}</b>] -  {2}%\n".format(
                 ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 20))]),
                 ''.join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 20))]),
-                round(percentage, 4))
+                round(percentage, 2))
             #cpu = "{psutil.cpu_percent()}%"
             tmp = "Uploading :- {4}" + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
                 humanbytes(current),

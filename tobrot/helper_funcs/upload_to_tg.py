@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | DargonPower84
+# Edited By🙋‍♂️ - Kai84☯🇮🇳
  
 import asyncio
 import logging
@@ -22,7 +23,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram.types import InputMediaAudio, InputMediaDocument, InputMediaVideo
 from requests.utils import requote_uri
-from tobrot import (
+from tgtlg import (
     DESTINATION_FOLDER,
     DOWNLOAD_LOCATION,
     EDIT_SLEEP_TIME_OUT,
@@ -33,12 +34,12 @@ from tobrot import (
     UPLOAD_AS_DOC,
     gDict,
 )
-from tobrot.helper_funcs.copy_similar_file import copy_file
-from tobrot.helper_funcs.display_progress import humanbytes, Progress
-from tobrot.helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
-from tobrot.helper_funcs.split_large_files import split_large_files
+from tgtlg.helper_funcs.copy_similar_file import copy_file
+from tgtlg.helper_funcs.display_progress import humanbytes, Progress
+from tgtlg.helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
+from tgtlg.helper_funcs.split_large_files import split_large_files
  
-# stackoverflow🤐
+# stackoverflow
 def getFolderSize(p):
     prepend = partial(os.path.join, p)
     return sum(
@@ -71,7 +72,7 @@ async def upload_to_tg(
         new_m_esg = message
         if not message.photo:
             new_m_esg = await message.reply_text(
-                f"Found {len(directory_contents)} files <a href='tg://user?id={from_user}'>🤒</a>",
+                f"Found {len(directory_contents)} files <a href='tg://user?id={from_user}'>!</a>",
                 quote=True
                 # reply_to_message_id=message.message_id
             )
@@ -92,8 +93,8 @@ async def upload_to_tg(
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
                 "Telegram does not support uploading this file.\n"
-                f"Detected File Size: {d_f_s} 😡\n"
-                "\n🤖 trying to split the files 🌝🌝🌚"
+                f"Detected File Size: {d_f_s}\n"
+                "\nTrying to split the files.."
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -102,9 +103,9 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"Detected File Size: {d_f_s} 😡\n"
+                f"Detected File Size: {d_f_s}\n"
                 f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
-                "trying to upload to Telegram, now ..."
+                "Trying to upload to Telegram, now.."
             )
             for le_file in totlaa_sleif:
                 # recursion: will this FAIL somewhere?
@@ -138,13 +139,13 @@ async def upload_to_tg(
     return dict_contatining_uploaded_files
  
  
-# © gautamajay52 thanks to Rclone team for this wonderful tool.🧘
+# © gautamajay52 thanks to Rclone team for this wonderful tool.
  
  
 async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
     await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
     del_it = await message.edit_text(
-        f"<a href='tg://user?id={g_id}'>🔊</a> Now Uploading to ☁️ Cloud!!!"
+        f"<a href='tg://user?id={g_id}'>🔊</a> Uploading to Drive.."
     )
     if not os.path.exists("rclone.conf"):
         with open("rclone.conf", "w+", newline="\n", encoding="utf-8") as fole:
@@ -201,7 +202,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         gjay = size(os.path.getsize(file_upload))
         button = []
         button.append(
-            [pyrogram.InlineKeyboardButton(text="☁️ CloudUrl ☁️", url=f"{gauti}")]
+            [pyrogram.InlineKeyboardButton(text="Cloud URL", url=f"{gauti}")]
         )
         if INDEX_LINK:
             indexurl = f"{INDEX_LINK}/{os.path.basename(file_upload)}"
@@ -210,14 +211,14 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
             button.append(
                 [
                     pyrogram.InlineKeyboardButton(
-                        text="ℹ️ IndexUrl ℹ️", url=f"{tam_link}"
+                        text="Index URL", url=f"{tam_link}"
                     )
                 ]
             )
         button_markup = pyrogram.InlineKeyboardMarkup(button)
         await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
         await messa_ge.reply_text(
-            f"🤖: Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
+            f"Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>!</a>\n Size: {gjay}",
             reply_markup=button_markup,
         )
         os.remove(file_upload)
@@ -269,7 +270,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         LOGGER.info(gjay)
         button = []
         button.append(
-            [pyrogram.InlineKeyboardButton(text="☁️ CloudUrl ☁️", url=f"{gautii}")]
+            [pyrogram.InlineKeyboardButton(text="Cloud URL", url=f"{gautii}")]
         )
         if INDEX_LINK:
             indexurl = f"{INDEX_LINK}/{os.path.basename(file_upload)}/"
@@ -285,7 +286,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         button_markup = pyrogram.InlineKeyboardMarkup(button)
         await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
         await messa_ge.reply_text(
-            f"🤖: Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>🤒</a>\n📀 Size: {gjay}",
+            f"Uploaded successfully `{os.path.basename(file_upload)}` <a href='tg://user?id={g_id}'>!</a>\nSize: {gjay}",
             reply_markup=button_markup,
         )
         shutil.rmtree(file_upload)
@@ -318,7 +319,7 @@ async def upload_single_file(
         message_for_progress_display = message
         if not edit_media:
             message_for_progress_display = await message.reply_text(
-                "<b>Trying to upload</b>\n\n📙<b> File Name</b>: <code>{}</code>".format(os.path.basename(local_file_name))
+                "<b>Trying to upload</b>\n\n<b> File Name</b>: <code>{}</code>".format(os.path.basename(local_file_name))
             )
             prog = Progress(from_user, client, message_for_progress_display)
         sent_message = await message.reply_document(
@@ -348,10 +349,10 @@ async def upload_single_file(
             message_for_progress_display = message
             if not edit_media:
                 message_for_progress_display = await message.reply_text(
-                    "<b>Trying to upload</b>\n\n📙<b> File Name</b>: <code>{}</code>".format(os.path.basename(local_file_name))
+                    "<b>Trying to upload</b>\n\n<b> File Name</b>: <code>{}</code>".format(os.path.basename(local_file_name))
                 )
                 prog = Progress(from_user, client, message_for_progress_display)
-            if local_file_name.upper().endswith(("MKV", "MP4", "WEBM", "M4V", "3GP")):
+            if local_file_name.upper().endswith(("MKV", "MP4", "WEBM")):
                 duration = 0
                 try:
                     metadata = extractMetadata(createParser(local_file_name))
@@ -538,7 +539,7 @@ async def upload_single_file(
             time.sleep(g.x)
         except Exception as e:
             LOGGER.info(e)
-            await message_for_progress_display.edit_text("**FAILED**\n" + str(e))
+            await message_for_progress_display.edit_text("**Failed.**\n" + str(e))
         else:
             if message.message_id != message_for_progress_display.message_id:
                 try:

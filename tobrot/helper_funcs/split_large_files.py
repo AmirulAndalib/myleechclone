@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Akshay C / Shrimadhav U K / YK
+# Edited By🙋‍♂️ - Kai84☯🇮🇳
 
 import asyncio
 import logging
@@ -9,7 +10,7 @@ import time
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from tobrot import LOGGER, MAX_TG_SPLIT_FILE_SIZE, SP_LIT_ALGO_RITH_M
+from tgtlg import LOGGER, MAX_TG_SPLIT_FILE_SIZE, SP_LIT_ALGO_RITH_M
 
 
 async def split_large_files(input_file):

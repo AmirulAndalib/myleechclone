@@ -13,7 +13,7 @@ import traceback
 from pyrogram import Client, filters
 from pyrogram.handlers import CallbackQueryHandler, MessageHandler
 
-from tgtlg import (
+from tobrob import (
     API_HASH,
     APP_ID,
     AUTH_CHANNEL,
@@ -46,13 +46,13 @@ from tgtlg import (
     TOGGLE_DOC,
     BOT_CMD_POSTFIX,
 )
-from tgtlg.helper_funcs.download import down_load_media_f
-from tgtlg.plugins.call_back_button_handler import button
+from tobrot.helper_funcs.download import down_load_media_f
+from tobrot.plugins.call_back_button_handler import button
 
 # the logging things
-from tgtlg.plugins.choose_rclone_config import rclone_command_f
-from tgtlg.plugins.custom_thumbnail import clear_thumb_nail, save_thumb_nail
-from tgtlg.plugins.incoming_message_fn import (
+from tobrot.plugins.choose_rclone_config import rclone_command_f
+from tobrot.plugins.custom_thumbnail import clear_thumb_nail, save_thumb_nail
+from tobrot.plugins.incoming_message_fn import (
     g_clonee,
     g_yt_playlist,
     incoming_message_f,
@@ -61,9 +61,9 @@ from tgtlg.plugins.incoming_message_fn import (
     rename_tg_file,
 )
 
-from tgtlg.plugins.new_join_fn import *
-from tgtlg.plugins.rclone_size import check_size_g, g_clearme
-from tgtlg.plugins.status_message_fn import (
+from tobrot.plugins.new_join_fn import *
+from tobrot.plugins.rclone_size import check_size_g, g_clearme
+from tobrot.plugins.status_message_fn import (
     cancel_message_f,
     eval_message_f,
     exec_message_f,

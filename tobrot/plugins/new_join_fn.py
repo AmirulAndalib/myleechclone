@@ -1,7 +1,7 @@
 import logging
 
 import pyrogram
-from tobrot import AUTH_CHANNEL, LOGGER
+from tobrot import AUTH_CHANNEL, LOGGER, BOT_START_TIME
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -21,10 +21,14 @@ async def new_join_f(client, message):
                )
             )
         # leave chat
-       #await client.leave_chat(chat_id=message.chat.id, delete=True)
+       await client.leave_chat(chat_id=message.chat.id, delete=True)
     # delete all other messages, except for AUTH_CHANNEL
     await message.delete(revoke=True)
 
+    async def start_message_f(client, message):
+    uptime = get_readable_time((time.time() - BOT_START_TIME))
+    await message.reply_text(
+        f"""Hi, I've been alive for `{uptime}`. \nTo see the list of available commands, do /help.""")
 
 async def help_message_f(client, message):
     # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)

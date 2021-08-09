@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K | gautamajay52 | MaxxRider | Dragonpower84
+# Edited By🙋‍♂️ - Kai84☯🇮🇳
 
 import asyncio
 import logging
 import os
+import re
 import sys
 import time
 import requests
+import math
 
 import aria2p
 from pyrogram.errors import FloodWait, MessageNotModified
@@ -20,6 +23,8 @@ from tobrot import (
     EDIT_SLEEP_TIME_OUT,
     LOGGER,
     MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START,
+    FINISHED_PROGRESS_STR,
+    UN_FINISHED_PROGRESS_STR
 )
 from tobrot.helper_funcs.create_compressed_archive import (
     create_archive,
@@ -328,15 +333,18 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     msgg = f"<b>Connections : {file.connections} </b>"
                 else:
                     msgg = f"<b>S: {file.num_seeders} 🔸 P: {file.connections}</b>\n\n"
+                    prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(10 - math.floor(percentage / 5))]))
+                    
                 msg = f"\n<b>Downloading :</b> <code>{downloading_dir_name}</code>\n<b>Speed :</b> {file.download_speed_string()} 🔻"
+                msg += f"\n<b>Downloaded</b> :- \n<b>{prog}</b> - **{file.progress_string()}**"
                 msg += f"\n<b>Size :</b> {file.total_length_string()}"
-                msg += f"\n<b>Downloaded</b> : {file.progress_string()} \n<b>ETA :</b> {file.eta_string()} \n {msgg}"
+                msg += f"\n<b>ETA :</b> {file.eta_string()} \n {msgg}"
                 msg += f"\n<b>Using Engine : </b>Aria2\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>"
                 inline_keyboard = []
                 ikeyboard = []
                 ikeyboard.append(
                     InlineKeyboardButton(
-                        " 🗑️ Cancel Process", callback_data=(f"cancel {gid}").encode("UTF-8")
+                        "Cancel Process", callback_data=(f"cancel {gid}").encode("UTF-8")
                     )
                 )
                 inline_keyboard.append(ikeyboard)

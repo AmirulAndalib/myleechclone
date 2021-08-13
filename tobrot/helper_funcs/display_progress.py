@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider | DragonPower84
+# (c) Shrimadhav U K | gautamajay52
 
 import logging
 import math
@@ -23,7 +23,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
 
 
 class Progress:
@@ -73,11 +72,11 @@ class Progress:
             elapsed_time = round(diff) * 1000
             time_to_completion = round((total - current) / speed) * 1000
             estimated_total_time = time_to_completion
-            
+
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
-            progress = "\n[<b>{0}{1}</b>] -  {2}%\n".format(
+            progress = "[{0}{1}] \nP: {2}%\n".format(
                 "".join(
                     [FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]
                 ),
@@ -87,15 +86,15 @@ class Progress:
                         for i in range(20 - math.floor(percentage / 5))
                     ]
                 ),
-                round(percentage, 2))
-            #cpu = "{psutil.cpu_percent()}%"
-            tmp = "Uploading :- " + progress + "\n<b>Uploaded : </b>{0} of {1}\n<b>Speed : </b>{2}/s\n<b>ETA : </b>{3}\n<b>Using Engine : </b>Pyrogram ".format(
+                round(percentage, 2),
+            )
+
+            tmp = progress + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
+                # elapsed_time if elapsed_time != '' else "0 s",
                 estimated_total_time if estimated_total_time != "" else "0 s",
-                
-            tmp = "\n\n<b>⚡️Made By🙋‍♂️ - Kai84☯🇮🇳 ❤️</b>\n"
             )
             try:
                 if not self._mess.photo:
@@ -120,7 +119,7 @@ def humanbytes(size):
         return ""
     power = 2 ** 10
     n = 0
-    Dic_powerN = {0: " ", 1: "K", 2: "M", 3: "G", 4: "Ti"}
+    Dic_powerN = {0: " ", 1: "Ki", 2: "Mi", 3: "Gi", 4: "Ti"}
     while size > power:
         size /= power
         n += 1

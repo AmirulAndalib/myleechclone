@@ -23,7 +23,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pyrogram.types import InputMediaAudio, InputMediaDocument, InputMediaVideo
 from requests.utils import requote_uri
-from tgtlg import (
+from tobrot import (
     DESTINATION_FOLDER,
     DOWNLOAD_LOCATION,
     EDIT_SLEEP_TIME_OUT,
@@ -34,10 +34,10 @@ from tgtlg import (
     UPLOAD_AS_DOC,
     gDict,
 )
-from tgtlg.helper_funcs.copy_similar_file import copy_file
-from tgtlg.helper_funcs.display_progress import humanbytes, Progress
-from tgtlg.helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
-from tgtlg.helper_funcs.split_large_files import split_large_files
+from tobrot.helper_funcs.copy_similar_file import copy_file
+from tobrot.helper_funcs.display_progress import humanbytes, Progress
+from tobrot.helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
+from tobrot.helper_funcs.split_large_files import split_large_files
  
 # stackoverflow
 def getFolderSize(p):

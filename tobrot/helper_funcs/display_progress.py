@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | Dragonpower84
+# Edited By🙋‍♂️ - Kai84☯🇮🇳
 
 import logging
 import math
@@ -72,7 +73,7 @@ class Progress:
             elapsed_time = round(diff) * 1000
             time_to_completion = round((total - current) / speed) * 1000
             estimated_total_time = time_to_completion
-
+            base_file_name = os.path.basename(local_file_name)
             elapsed_time = TimeFormatter(milliseconds=elapsed_time)
             estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
@@ -89,7 +90,7 @@ class Progress:
                 round(percentage, 2),
             )
 
-            tmp = progress + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
+            tmp = "Uploading:-\n" + progress + base_file_nane + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),

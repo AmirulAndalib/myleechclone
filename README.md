@@ -38,6 +38,8 @@
 
 ##### Optional Configuration Variables
 
+* `BOT_CMD_POSTFIX`
+
 * `DOWNLOAD_LOCATION`
 
 * `MAX_FILE_SIZE`

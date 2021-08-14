@@ -103,10 +103,22 @@
 * `DESTINATION_FOLDER`: Name of your folder in ur respective drive where you want to upload the files using the bot.
 
 
-<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200""/></a></p>
+<p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200""></a></p>
 
-## Join Us At
+### Join Us At
 
-- <img alt="GitHub followers" src="https://img.shields.io/github/followers/Dragonpower84?color=red&logo=Kai84&style=social">
+- <a href="https://t.me/kaitlg"><img src="https://img.shields.io/badge/-Telegram-9cf?style=social&logo=Telegram" width="200"></a>
+
+### Repo Stats
 
 - <img alt="GitHub forks" src="https://img.shields.io/github/forks/Dragonpower84/myleechclone?color=9cf&label=No.%20Of%20Forks&logo=Kai84&logoColor=blue&style=social">
+
+- <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dragonpower84/kaitlg?style=flat-square">
+
+- <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/dragonpower84/kaitlg?logoColor=orange&style=social">
+
+#### Credits :-
+
+- Owner - <a href="https://t.me/kai_8_4">Kai84☯</a>
+
+- Helped By - <a href="https://t.me/XcodersHub">Ｐｅｒｕ Ｃｏｄｅｒ</a> & <a href="https://t.me/BotWairAFK">𝚆𝚊𝚛𝚒𝚜 𝙰𝚕𝚒</a>

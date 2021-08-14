@@ -111,11 +111,11 @@
 
 ### Repo Stats
 
-- <img alt="GitHub forks" src="https://img.shields.io/github/forks/Dragonpower84/myleechclone?color=9cf&label=No.%20Of%20Forks&logo=Kai84&logoColor=blue&style=social">
+ <img alt="GitHub forks" src="https://img.shields.io/github/forks/Dragonpower84/kaitlg?label=No.%20Of%20Forks&logo=Kai84&logoColor=blue&style=social">
 
-- <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dragonpower84/kaitlg?style=flat-square">
+ <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/dragonpower84/kaitlg?style=flat-square">
 
-- <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/dragonpower84/kaitlg?logoColor=orange&style=social">
+ <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/dragonpower84/kaitlg?style=social">
 
 #### Credits :-
 

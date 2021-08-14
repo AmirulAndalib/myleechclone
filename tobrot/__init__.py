@@ -9,8 +9,6 @@
 import logging
 import os
 import time
-import telegram.ext as tg
-from telegram import ParseMode, BotCommand
 
 from logging.handlers import RotatingFileHandler
 from collections import defaultdict

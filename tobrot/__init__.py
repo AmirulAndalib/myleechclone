@@ -129,8 +129,6 @@ gDict = defaultdict(lambda: [])
 # user settings dict #ToDo
 user_settings = defaultdict(lambda: {})
 
-updater = tg.Updater(token=TG_BOT_TOKEN)
-bot = updater.bot
 
 def multi_rclone_init():
     if not os.path.exists("rclone.conf") and RCLONE_CONFIG:  # you never know

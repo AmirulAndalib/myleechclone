@@ -107,7 +107,7 @@
 
 ### Join Us At
 
-- <a href="https://t.me/kaitlg"><img src="https://img.shields.io/badge/-Telegram-9cf?style=social&logo=Telegram" width="200"></a>
+- <a href="https://t.me/conkai84_bot"><img src="https://img.shields.io/badge/-Telegram-9cf?style=social&logo=Telegram" width="80"></a>
 
 ### Repo Stats
 
@@ -119,6 +119,4 @@
 
 #### Credits :-
 
-- Owner - <a href="https://t.me/kai_8_4">Kai84☯</a>
-
-- Helped By - <a href="https://t.me/XcodersHub">Ｐｅｒｕ Ｃｏｄｅｒ</a> & <a href="https://t.me/BotWairAFK">𝚆𝚊𝚛𝚒𝚜 𝙰𝚕𝚒</a>
+- Owner: <a href="https://t.me/kai_8_4">Kai84☯</a>
